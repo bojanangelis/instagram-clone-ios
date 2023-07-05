@@ -13,6 +13,8 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                Spacer()
+                
                 Image("insta_logo")
                     .resizable()
                     .scaledToFit()
@@ -20,18 +22,10 @@ struct LoginView: View {
                 VStack{
                     TextField("Enter your email", text: $email)
                         .autocapitalization(.none)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(IGTextFieldModifier())
                     
                     SecureField("Enter your password", text: $password)
-                        .font(.subheadline)
-                        .padding(12)
-                        .background(Color(.systemGray6))
-                        .cornerRadius(10)
-                        .padding(.horizontal, 24)
+                        .modifier(IGTextFieldModifier())
                 }
                 Button {
                     print("Show forgot password")
@@ -57,10 +51,46 @@ struct LoginView: View {
                 }
                 .padding(.vertical)
                 
-//                HStack{
-//                    Rectangle()
-//                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: Path)
-//                }
+                HStack{
+                    Rectangle()
+                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+                        
+                    Text("OR")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        
+                    Rectangle()
+                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+                }
+                .foregroundColor(.gray)
+                
+                HStack {
+                    Image("facebook_logo")
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                    Text("Continue with Facebook")
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                        .foregroundColor(Color(.systemBlue))
+                }
+                .padding(.top, 8)
+                Spacer()
+                
+                Divider()
+                
+                NavigationLink {
+                   AddEmailView()
+                        .navigationBarBackButtonHidden(true)
+                } label: {
+                    HStack(spacing: 3){
+                        Text("Don't have an account?")
+                        
+                        Text("Sign Up")
+                            .fontWeight(.semibold)
+                    }
+                    .font(.footnote)
+                }
+
             }
         }
     }
