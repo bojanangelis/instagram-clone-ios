@@ -8,21 +8,24 @@
 import SwiftUI
 
 struct FeedCelView: View {
+    let post: Post
     var body: some View {
         VStack {
             HStack{
-                Image("prof_pic01")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                Text("bojanangjeleski")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
+                if let user = post.user {
+                    Image(user.profileImageUrl ?? "")
+                        .resizable()
+                        .scaledToFill()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    Text(user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
                 Spacer()
             }.padding(.leading, 8)
 
-            Image("prof_pic01")
+            Image(post.imageUrl)
                 .resizable()
                 .scaledToFill()
                 .frame(height: 400)
@@ -54,7 +57,7 @@ struct FeedCelView: View {
             .padding(.top, 4)
             .foregroundColor(.black)
           
-                Text("23 likes")
+            Text("\(post.likes) likes")
                     .font(.footnote)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -62,8 +65,8 @@ struct FeedCelView: View {
                     .padding(.top, 1.2)
             
             HStack{
-                Text("bojanangjeleski ").fontWeight(.semibold) +
-                Text("This is some text caption for now !")
+                Text("\(post.user?.username ?? "") ").fontWeight(.semibold) +
+                Text(post.caption)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(.leading, 10)
@@ -82,6 +85,6 @@ struct FeedCelView: View {
 
 struct FeedCelView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCelView()
+        FeedCelView(post: Post.MOCK_POSTS[0])
     }
 }

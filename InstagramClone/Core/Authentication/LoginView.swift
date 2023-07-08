@@ -19,6 +19,7 @@ struct LoginView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 220, height: 100)
+                
                 VStack{
                     TextField("Enter your email", text: $email)
                         .autocapitalization(.none)

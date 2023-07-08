@@ -18,6 +18,12 @@
 		D7400A902A54327F0062D26C /* FeedCelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7400A8F2A54327F0062D26C /* FeedCelView.swift */; };
 		D7400A922A54BCC70062D26C /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7400A912A54BCC70062D26C /* SearchView.swift */; };
 		D7400A942A54C1D20062D26C /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7400A932A54C1D20062D26C /* LoginView.swift */; };
+		D7499CAD2A57259900854672 /* CreatePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7499CAC2A57259900854672 /* CreatePasswordView.swift */; };
+		D7499CAF2A57279100854672 /* CompleateSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7499CAE2A57279100854672 /* CompleateSignUpView.swift */; };
+		D7DC88D82A59D9A400D94D71 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC88D72A59D9A400D94D71 /* User.swift */; };
+		D7DC88DA2A59F01500D94D71 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC88D92A59F01500D94D71 /* CurrentUserProfileView.swift */; };
+		D7DC88DC2A59FC6100D94D71 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC88DB2A59FC6100D94D71 /* Post.swift */; };
+		D7DC88DE2A5A080100D94D71 /* PostGridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DC88DD2A5A080100D94D71 /* PostGridView.swift */; };
 		D7EE17FF2A55E96C00A748F2 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE17FE2A55E96C00A748F2 /* AddEmailView.swift */; };
 		D7EE18012A55F47600A748F2 /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE18002A55F47600A748F2 /* IGTextFieldModifier.swift */; };
 		D7EE18032A55F58F00A748F2 /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7EE18022A55F58F00A748F2 /* CreateUsernameView.swift */; };
@@ -36,6 +42,12 @@
 		D7400A8F2A54327F0062D26C /* FeedCelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCelView.swift; sourceTree = "<group>"; };
 		D7400A912A54BCC70062D26C /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		D7400A932A54C1D20062D26C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		D7499CAC2A57259900854672 /* CreatePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePasswordView.swift; sourceTree = "<group>"; };
+		D7499CAE2A57279100854672 /* CompleateSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleateSignUpView.swift; sourceTree = "<group>"; };
+		D7DC88D72A59D9A400D94D71 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7DC88D92A59F01500D94D71 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
+		D7DC88DB2A59FC6100D94D71 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		D7DC88DD2A5A080100D94D71 /* PostGridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridView.swift; sourceTree = "<group>"; };
 		D7EE17FE2A55E96C00A748F2 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
 		D7EE18002A55F47600A748F2 /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
 		D7EE18022A55F58F00A748F2 /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
@@ -124,6 +136,8 @@
 		D7400A7D2A540D710062D26C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D7DC88D72A59D9A400D94D71 /* User.swift */,
+				D7DC88DB2A59FC6100D94D71 /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -141,6 +155,8 @@
 				D7400A932A54C1D20062D26C /* LoginView.swift */,
 				D7EE17FE2A55E96C00A748F2 /* AddEmailView.swift */,
 				D7EE18022A55F58F00A748F2 /* CreateUsernameView.swift */,
+				D7499CAC2A57259900854672 /* CreatePasswordView.swift */,
+				D7499CAE2A57279100854672 /* CompleateSignUpView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -158,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				D7400A882A5418480062D26C /* ProfileView.swift */,
+				D7DC88D92A59F01500D94D71 /* CurrentUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -197,6 +214,7 @@
 			children = (
 				D7400A8B2A541F890062D26C /* UserStatView.swift */,
 				D7EE18002A55F47600A748F2 /* IGTextFieldModifier.swift */,
+				D7DC88DD2A5A080100D94D71 /* PostGridView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -273,16 +291,22 @@
 			files = (
 				D7400A902A54327F0062D26C /* FeedCelView.swift in Sources */,
 				D7400A892A5418480062D26C /* ProfileView.swift in Sources */,
+				D7DC88DA2A59F01500D94D71 /* CurrentUserProfileView.swift in Sources */,
 				D7400A6C2A540CE80062D26C /* ContentView.swift in Sources */,
+				D7DC88DC2A59FC6100D94D71 /* Post.swift in Sources */,
 				D7400A942A54C1D20062D26C /* LoginView.swift in Sources */,
 				D7400A6A2A540CE80062D26C /* InstagramCloneApp.swift in Sources */,
+				D7499CAF2A57279100854672 /* CompleateSignUpView.swift in Sources */,
+				D7DC88DE2A5A080100D94D71 /* PostGridView.swift in Sources */,
 				D7EE17FF2A55E96C00A748F2 /* AddEmailView.swift in Sources */,
 				D7EE18032A55F58F00A748F2 /* CreateUsernameView.swift in Sources */,
+				D7DC88D82A59D9A400D94D71 /* User.swift in Sources */,
 				D7400A922A54BCC70062D26C /* SearchView.swift in Sources */,
 				D7EE18012A55F47600A748F2 /* IGTextFieldModifier.swift in Sources */,
 				D7400A8C2A541F890062D26C /* UserStatView.swift in Sources */,
 				D7400A8E2A5432620062D26C /* FeedView.swift in Sources */,
 				D7400A872A540EC10062D26C /* MainTabView.swift in Sources */,
+				D7499CAD2A57259900854672 /* CreatePasswordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

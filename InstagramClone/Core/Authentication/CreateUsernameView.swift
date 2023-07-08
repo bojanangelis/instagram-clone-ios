@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CreateUsernameView: View {
     @State private var username = ""
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack(spacing: 12) {
             Text("Create username")
@@ -27,7 +29,8 @@ struct CreateUsernameView: View {
                 .modifier(IGTextFieldModifier())
             
             NavigationLink {
-               CreateUsernameView()
+                CreatePasswordView()
+                    .navigationBarBackButtonHidden(true)
             } label: {
                 Text("Next")
                     .font(.subheadline)
@@ -40,6 +43,15 @@ struct CreateUsernameView: View {
             .padding(.vertical)
             
             Spacer()
+        }
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Image(systemName: "chevron.left")
+                    .imageScale(.large)
+                    .onTapGesture {
+                        dismiss()
+                    }
+            }
         }
     }
 }

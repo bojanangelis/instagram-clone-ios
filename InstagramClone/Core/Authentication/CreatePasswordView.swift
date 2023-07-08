@@ -1,35 +1,34 @@
 //
-//  AddEmailView.swift
+//  CreatePasswordView.swift
 //  InstagramClone
 //
-//  Created by Bojan Angjeleski on 5.7.23.
+//  Created by Bojan Angjeleski on 6.7.23.
 //
 
 import SwiftUI
 
-struct AddEmailView: View {
-    @State private var email = ""
-    @Environment(\.dismiss) var dismiss
-    
+struct CreatePasswordView: View {
+    @State private var password = ""
+    @Environment (\.dismiss) var dismiss
     var body: some View {
         VStack(spacing: 12) {
-            Text("Add your email")
+            Text("Create password")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
             
-            Text("You'll use this email to sign in to your account")
+            Text("Your password must be at least 6 characters in length")
                 .font(.footnote)
                 .foregroundColor(.gray)
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
-            
-            TextField("Email", text: $email)
-                .autocapitalization(.none)
+             
+            SecureField("Password", text: $password)
                 .modifier(IGTextFieldModifier())
+                .padding(.top)
             
             NavigationLink {
-               CreateUsernameView()
+               CompleateSignUpView()
                     .navigationBarBackButtonHidden(true)
             } label: {
                 Text("Next")
@@ -56,8 +55,8 @@ struct AddEmailView: View {
     }
 }
 
-struct AddEmailView_Previews: PreviewProvider {
+struct CreatePasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        AddEmailView()
+        CreatePasswordView()
     }
 }
