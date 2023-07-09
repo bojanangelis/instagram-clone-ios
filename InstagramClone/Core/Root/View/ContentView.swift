@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModal = ContentViewModel()
     var body: some View {
-      MainTabView()
+        Group {
+            
+        }
     }
 }
 
